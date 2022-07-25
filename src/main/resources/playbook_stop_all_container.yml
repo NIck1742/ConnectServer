@@ -1,0 +1,6 @@
+---
+- hosts : '{{ host }}'
+  tasks:
+    - name: stop all container with Shell
+      shell:
+          "docker stop $(docker ps -q)"

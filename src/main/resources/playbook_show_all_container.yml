@@ -1,0 +1,20 @@
+---
+- hosts: clients
+  tasks:
+    - name: show all container with Shell
+      shell:
+        "docker ps -a"
+      register: allContainers
+      tags: allContainers
+
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+        path: /tmp
+        state: directory
+        mode: '0755'
+
+    - copy: content="{{ allContainers }}" dest=~/.ansible/tmp/containers
+
+    - fetch:
+        src: ~/.ansible/tmp/containers
+        dest: ~/.ansible/ConnectServer/containers/{{ name }}

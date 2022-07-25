@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<title>ConnectServer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+table, th, td {
+  border:1px solid black;
+  text-align: center
+  }
+textarea {
+  resize: none;
+  height: 100%;
+    width: 100%;
+   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+</style>
+
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="https://heise.cloudimg.io/width/600/q75.png-lossy-75.webp-lossy-75.foil1/_www-heise-de_/tipps-tricks/imgs/96/2/9/9/8/6/1/7/__xfffd_berwachung-69a805326c4979a1.jpeg" style="width:100%" alt="Avatar">
+       
+        </div>
+        <div class="w3-container">
+          
+          <br>
+          
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i><a href="/">Server</a></b></p>
+          <!--Server_start-->
+          <details open>
+      		<summary>clients</summary>
+            <ul>
+            <p><img src="https://www.clipartmax.com/png/small/42-429610_yellow-power-button-svg-clip-arts-600-x-600-px-power-button.png" alt="Yellow Power Button Svg Clip Arts 600 X 600 Px - Power Button Yellow Png" style=”width:15px;height:15px;"><a href="/page/192.168.2.35">Lars</a></p>
+          </ul>
+          </details>
+<!--Server_end-->
+
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Main Config</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Details</b></h5>
+          <p>Server Ip: 192.168.178.46</p>
+          <p>VPN Ip: 10.0.0.1</p>
+          <h5 class="w3-opacity"><b>Add Server</b></h5>
+          <form action="/subscribe" method="get">
+                <p>
+                <input name="ip" id="ip" type="text" placeholder="Ip-Adress" required>
+                </p>
+                <p>
+                <input name="sshUser" id="sshUser" type="text" placeholder="SSH-Username" required>
+                </p>
+                <p>
+                <input name="name" id="name" type="text" placeholder="Name" required>
+                </p>
+                <p>
+                <select name="group" id="group-select" required >
+                <option value="\">--Select Group--</option>
+                <!--group_select_start-->
+                	<option value=test> test</option>
+                	<option value=asd> asd</option>
+    			<!--group_select_end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </select>
+                </p>
+		<p>
+			<input type="checkbox" id="docker" name="scales"checked>
+			<label for="docker">Install Docker</label>
+		</p>
+                <p>
+                <button name="absenden" value="abgesendet" type="submit">Subscribe new Server</button>
+                </p>
+          </form>
+	<hr>
+          <h5 class="w3-opacity"><b>Docker</b></h5>
+          <details>
+      		<summary>Docker Images</summary>
+            <ul>
+                                                <!--Docker_start-->
+<!--Docker_end-->
+          </ul>
+          </details>
+          <hr>
+	            
+            <h5 class="w3-opacity"><b>ManageGroups</b></h5>
+            <form action="/manageGroups" method="get">
+            <table style="width:100%">
+  			<tr>
+    			<th>Name</th>
+    			<th>Group</th>
+  			</tr>
+            <!--groups_start-->
+    			<tr>
+    			<td>Lars</td>
+    			<td><Select name = group_select id= group_select>
+                	<option value=test selected> test</option>
+                	<option value=asd> asd</option>
+                    </Select></td>
+  			</tr>
+    			<!--groups_end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</table>
+            <br>
+            <center>
+            <button name="absenden" value="abgesendet" type="submit">Apply</button>
+            </center>
+            </form>
+            <form action="/createGroup" method="get">
+            <p>Create new Group<p>
+            <input id="group" name="group" type="text">
+            <button name="absenden" value="abgesendet" type="submit">Create</button>
+            </form>
+          <hr>
+          </div>
+          
+         <h5 class="w3-opacity"><b>Write your Playbook</b></h5>
+
+		<form action="/savePlaybook">
+			<textarea id="playbook" name="playbook" rows="40" cols="100" required></textarea>
+ 			<br><br>
+			<center>
+  				<input type ="text" name = "playbook_name" id ="playbook_name" placeholder = "write Playbook-name" required>
+  				<input type="submit" value="Create Playbook">
+  			</center>
+  			<br><br>
+		</form>
+        
+        <h5 class="w3-opacity"><b>Play written playbooks</b></h5>
+        
+        <table style="width:100%">
+            <!--playbooks_start-->
+    <tr>
+    			<td><a href="/playbook/test.yml">test.yml</a></td>
+    			<td><button onclick="window.location.href = '/startPlaybook?playbook_name=test.yml';">Apply</button></td>
+  			</tr>
+    <tr>
+    			<td><a href="/playbook/aaaaa.yml">aaaaa.yml</a></td>
+    			<td><button onclick="window.location.href = '/startPlaybook?playbook_name=aaaaa.yml';">Apply</button></td>
+  			</tr>
+    <tr>
+    			<td><a href="/playbook/asdasdasd.yml">asdasdasd.yml</a></td>
+    			<td><button onclick="window.location.href = '/startPlaybook?playbook_name=asdasdasd.yml';">Apply</button></td>
+  			</tr>
+    <tr>
+    			<td><a href="/playbook/testBook.yml">testBook.yml</a></td>
+    			<td><button onclick="window.location.href = '/startPlaybook?playbook_name=testBook.yml';">Apply</button></td>
+  			</tr>
+    <tr>
+    			<td><a href="/playbook/null.yml">null.yml</a></td>
+    			<td><button onclick="window.location.href = '/startPlaybook?playbook_name=null.yml';">Apply</button></td>
+  			</tr>
+            <!--playbooks_end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</table>
+            <br><br><br>
+
+
+<script>
+document.getElementById('playbook').addEventListener('keydown', function(e) {
+  if (e.key == 'Tab') {
+    e.preventDefault();
+    var start = this.selectionStart;
+    var end = this.selectionEnd;
+
+    // set textarea value to: text before caret + tab + text after caret
+    this.value = this.value.substring(0, start) +
+      "\t" + this.value.substring(end);
+
+    // put caret at right position again
+    this.selectionStart =
+      this.selectionEnd = start + 1;
+  }
+});
+</script>
+
+
+<button onclick="window.location.href = '/demo';">Demo</button>
+          </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+
+</body>
+</html>

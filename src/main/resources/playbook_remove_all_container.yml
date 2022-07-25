@@ -1,0 +1,6 @@
+---
+-hosts : '{{ host | default("clients")}}'
+  tasks:
+    -name: remove all container with Shell
+      shell:
+        "docker rm $(docker ps -a -q)

@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+<title>ConnectServer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+table, th, td {
+  border:1px solid black;
+  text-align: center}
+</style>
+
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="https://heise.cloudimg.io/width/600/q75.png-lossy-75.webp-lossy-75.foil1/_www-heise-de_/tipps-tricks/imgs/96/2/9/9/8/6/1/7/__xfffd_berwachung-69a805326c4979a1.jpeg" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-white">
+            <h2>Actual Server</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          
+          <br>
+          
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i><a href="/">Server</a></b></p>
+          <!--Server_start-->
+          <details open>
+      		<summary>clients</summary>
+            <ul>
+          </ul>
+          </details>
+<!--Server_end-->
+
+
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Actual Server</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Details</b></h5>
+          <p>Server Ip: 192.168.178.46</p>
+          <p>VPN Ip: 10.0.0.3</p>
+          <p>Group: Ubuntu
+	<hr>
+	<h5 class="w3-opacity"><b>Manage Docker</b></h5>
+	<!--Install_start-->
+      		<form action="/installDocker" method="get">
+            	<button name="absenden" value="abgesendet" type="submit">Install Docker</button>
+	</form>
+	<!--Install_end-->  
+	<!--Check_start-->    
+	<br>
+	
+          <details>
+	<!--Docker_start-->
+      		<summary>Server Installed docker Container: 0</summary>
+            
+	<!--Docker_end-->            
+          </details>
+	<br>
+	<hr>
+	<h5 class="w3-opacity"><b>Add Container</b></h5>
+	<form action="/addContainer" method="get">
+		<label>Add only one Container</label>
+		<p>
+                <select name="image" id="image" required >
+                <option value="\">--Select Image--</option>  
+		<!--Images_start-->
+      		<option value=clients> clients</option>
+		<!--Images_end-->                  
+                </select>
+                <input name="name" type="text" placeholder="Type Container Name">
+		<details>
+      		<summary>Adding Details</summary>
+		<input name="envs" type="text" placeholder="Field for Environment Vars">
+		<input name="ports" type="text" placeholder="Field for Ports">
+          	</details>
+		<br>
+		<button name="absenden" value="abgesendet" type="submit">Add Container</button>
+                </p>
+          </form>
+          <hr>
+	<h5 class="w3-opacity"><b>Pull Docker Image</b></h5>
+	<form action="/pullImage" method="get">
+	<p>Type Name of Docker Image from Hub<p>
+	<input name="image" type="text">
+            <button name="absenden" value="abgesendet" type="submit">Pull Image</button>
+	</form>
+
+		<form action="/tarball" method="get">
+		<select name="tar" id="tar" required >
+		<option value="\">--Select Tarfile--</option>  
+		<!--Tar_start-->
+      		<option value=clients> clients</option>
+		<!--Tar_end-->   
+		</select>     
+            <button name="absenden" value="abgesendet" type="submit">Apply Tarball</button>
+			</form>
+	<hr>
+	<!--Check_end-->
+          </div>
+          </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+
+</body>
+</html>

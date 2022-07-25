@@ -1,0 +1,26 @@
+---
+- hosts: '{{ host | default("clients")}}'
+  tasks:
+    - name: exec docker inspect with Shell
+      shell:
+        "docker inspect '{{docker_container}}'"
+      register: Inspect
+      tags: Inspect
+
+    - name: exec docker logs with Shell
+      shell:
+          "docker logs '{{docker_container}}'"
+      register: Logs
+      tags: Logs
+
+    - copy: content="{{ Inspect }}" dest=~/.ansible/tmp/{{docker_container}}Inspect
+
+    - copy: content="{{Logs}}" dest=~/.ansible/tmp/{{docker_container}}Logs
+
+    - fetch:
+        src: ~/.ansible/tmp/{{docker_container}}Inspect
+        dest: ~/.ansible/ConnectServer/containers/{{ name }}
+
+    - fetch:
+        src: ~/.ansible/tmp/{{docker_container}}Logs
+        dest: ~/.ansible/ConnectServer/containers/{{ name }}

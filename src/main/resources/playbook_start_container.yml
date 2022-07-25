@@ -1,0 +1,6 @@
+---
+- hosts : '{{ host }}'
+  tasks:
+    - name: start container with Shell
+      shell:
+          "docker start '{{docker_container}}'"

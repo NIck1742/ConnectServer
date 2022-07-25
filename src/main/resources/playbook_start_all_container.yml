@@ -1,0 +1,6 @@
+---
+- hosts : '{{ host }}'
+  tasks:
+    - name: start all container with Shell
+      shell:
+          "docker start $(docker ps -a)"

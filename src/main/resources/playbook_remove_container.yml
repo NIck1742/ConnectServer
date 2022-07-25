@@ -1,0 +1,6 @@
+---
+- hosts : '{{ host }}'
+  tasks:
+    - name: remove container with Shell
+      shell:
+        "docker container rm '{{ docker_container }}'"

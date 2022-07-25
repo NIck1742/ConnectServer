@@ -1,0 +1,14 @@
+---
+- hosts: '{{ host }}'
+  tasks:
+    - name: exec docker images with Shell
+      shell:
+        "docker image ls -a"
+      register: Images
+      tags: Images
+
+    - copy: content="{{ Images }}" dest=~/.ansible/tmp/Images
+
+    - fetch:
+        src: ~/.ansible/tmp/Images
+        dest: ~/.ansible/ConnectServer/containers/{{ name }}

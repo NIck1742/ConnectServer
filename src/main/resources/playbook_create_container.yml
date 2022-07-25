@@ -1,0 +1,17 @@
+---
+- name: Create Container with name and image
+  hosts: '{{ host }}'
+  become: true
+
+  tasks:
+    - name: Create default containers
+      docker_container:
+        name: "{{ name }}"
+        image: "{{ image }}"
+        command: "sleep 1d"
+        state: present
+        #->
+        ports:
+         - "42000:42000"
+        env:
+            TEST: fade

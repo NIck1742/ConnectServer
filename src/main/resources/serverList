@@ -1,0 +1,13 @@
+[DEMO]192.168.2.100 10.0.0.50 Lichtschaltung_EG root EG
+[DEMO]192.168.2.101 10.0.0.51 Rolladenschaltung_EG root EG
+[DEMO]192.168.2.102 10.0.0.52 Radioschaltung_EG root EG
+[DEMO]192.168.2.103 10.0.0.53 Lichtschaltung_K root Keller
+[DEMO]192.168.2.104 10.0.0.54 Torschaltung_K root Keller
+[DEMO]192.168.2.105 10.0.0.55 Lichtschaltung_OG1 root 1.OG
+[DEMO]192.168.2.106 10.0.0.56 Rolladenschaltung_OG1 root 1.OG
+[DEMO]192.168.2.107 10.0.0.57 Soundsystem_OG1 root 1.OG
+[DEMO]192.168.2.108 10.0.0.58 Lichtschaltung_OG2 root 2.OG
+[DEMO]192.168.2.109 10.0.0.59 Rolladenschaltung_OG2 root 2.OG
+[DEMO]192.168.2.110 10.0.0.60 Radioschaltung_OG2 root 2.OG
+[DEMO]192.168.2.111 10.0.0.61 Lichtschaltung_G root Garten
+[DEMO]192.168.2.112 10.0.0.62 Saunaschaltung_G root Garten

@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html>
+<title>ConnectServer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+table, th, td {
+  border:1px solid black;
+  text-align: center
+</style>
+
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="https://heise.cloudimg.io/width/600/q75.png-lossy-75.webp-lossy-75.foil1/_www-heise-de_/tipps-tricks/imgs/96/2/9/9/8/6/1/7/__xfffd_berwachung-69a805326c4979a1.jpeg" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2>Ansible1</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          
+          <br>
+          
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i><a href="/">Server</a></b></p>
+          <!--Server_start-->
+          <details open>
+      		<summary>clients</summary>
+            <ul>
+            <p><a href="/page/192.168.2.14">Ansible1</a></p>
+          </ul>
+          </details>
+<!--Server_end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Ansible1</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Details</b></h5>
+          <p>Server Ip: 192.168.2.14</p>
+          <p>VPN Ip: 10.0.0.2</p>
+          <p>Group: clients
+          <details>
+	            <!--Docker_start-->
+            <summary>Server Installed docker Container: 3</summary>
+            <table style="width:100%">
+  			<tr>
+    			<th>Name</th>
+    			<th>Image</th>
+    			<th>Status</th>
+    			<th>Start/Stop</th>
+  			</tr>
+  			<tr>
+    			<td><a href="192.168.2.14/docker3">docker3</a></td>
+    			<td>tomcat</td>
+    			<td>Created</td>
+    			<td><button onclick="window.location.href = '/start?host=10.0.0.2&container=docker3';">Start</td>
+  			</tr>
+  			<tr>
+    			<td><a href="192.168.2.14/docker1">docker1</a></td>
+    			<td>ubuntu</td>
+    			<td>Created</td>
+    			<td><button onclick="window.location.href = '/start?host=10.0.0.2&container=docker1';">Start</td>
+  			</tr>
+  			<tr>
+    			<td><a href="192.168.2.14/docker2">docker2</a></td>
+    			<td>ubuntu</td>
+    			<td>Created</td>
+    			<td><button onclick="window.location.href = '/start?host=10.0.0.2&container=docker2';">Start</td>
+  			</tr>
+			</table>
+<br><br>
+            <center>
+            <button onclick="window.location.href = '/startContainer';">Start All</button>
+            <button onclick="window.location.href = '/stopContainer';">Stop All</button>
+            </center>
+            <br><br>
+            <form action="/addContainer" method="get">
+            <select name="imageSelect" id="imageSelect" required >
+                <option value="">--Image--</option>
+                <option value="tomcat">tomcat</option>
+                <option value="ubuntu">ubuntu</option>
+                </select>
+                <input type="number" id="cAmount" name="cAmount" min="1" max="10" required>
+                <label for="cAmount">How much containers you want to add</label><br><br>
+                <button name="absenden" value="abgesendet" type="submit">Add Container</button>
+            </form>
+            <!--Docker_end-->
+            
+          </details>
+          <hr>
+          </div>
+          </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+
+</body>
+</html>

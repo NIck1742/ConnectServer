@@ -1,0 +1,9 @@
+---
+- hosts: '{{ host }}'
+  become: true
+
+  tasks:
+    - name: Pull Docker image
+      docker_image:
+        name: "{{ image }}"
+        source: pull

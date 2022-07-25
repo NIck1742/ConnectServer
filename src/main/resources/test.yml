@@ -1,0 +1,7 @@
+- hosts: all
+  remote_user: ansible1
+  tasks:
+          - name: Connection test
+            local_action: shell ssh ansible1@{{ inventory_hostname }} "echo success"
+            register: root_enabled
+          - debug: msg="{{ root_enabled.stdout}}"
